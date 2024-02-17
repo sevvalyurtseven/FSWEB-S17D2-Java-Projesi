@@ -1,7 +1,7 @@
 package com.workintech.s17g2.tax;
 
 import org.springframework.stereotype.Component;
-
+@Component
 public class DeveloperTax implements Taxable{
     @Override
     public Double getSimpleTaxRate() {
