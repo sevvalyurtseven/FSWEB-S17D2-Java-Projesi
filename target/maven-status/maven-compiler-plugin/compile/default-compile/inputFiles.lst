@@ -1,1 +1,11 @@
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/SeniorDeveloper.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/MidDeveloper.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/Experience.java
 /Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/S17g2Application.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/dto/DeveloperResponse.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/tax/DeveloperTax.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/tax/Taxable.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/Developer.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/DeveloperFactory.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/rest/DeveloperController.java
+/Users/sevval/Workintech/S17/S17G2/FSWEB-S17D2-Java-Projesi/src/main/java/com/workintech/s17g2/model/JuniorDeveloper.java
