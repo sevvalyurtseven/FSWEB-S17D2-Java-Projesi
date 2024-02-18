@@ -37,4 +37,10 @@ public class DeveloperController {
         }
         return new DeveloperResponse("create successfull", developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
     }
+    @GetMapping
+    public List<Developer> getAll(){
+        //return new ArrayList<>(developers.values());
+        return developers.values().stream().toList();
+    }
+
 }
