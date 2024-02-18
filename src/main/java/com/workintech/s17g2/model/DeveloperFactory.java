@@ -3,7 +3,7 @@ package com.workintech.s17g2.model;
 import com.workintech.s17g2.tax.Taxable;
 
 public class DeveloperFactory {
-    
+
     //TODO create developer by experience
 
     //TODO calculate tax and substract from existing salary = salary-salary*taxrate
