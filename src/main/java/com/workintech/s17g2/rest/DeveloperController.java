@@ -1,5 +1,6 @@
 package com.workintech.s17g2.rest;
 
+import com.workintech.s17g2.dto.DeveloperResponse;
 import com.workintech.s17g2.model.Developer;
 import com.workintech.s17g2.model.DeveloperFactory;
 import com.workintech.s17g2.tax.Taxable;
@@ -30,11 +31,11 @@ public class DeveloperController {
     }
     //[POST]/workintech/developers => id, name, salary ve experience değerlerini alır, experience tipine bakarak uygun developer objesini oluşturup developers mapine ekler. JuniorDeveloper için salary bilgisinden salarygetSimpleTaxRate() değerini düşmelisiniz. Aynı şekilde MidDeveloper için salarygetMiddleTaxRate(), SeniorDeveloper için salary*getUpperTaxRate() değerlerini salary bilgisinden düşmelisiniz.
     @PostMapping
-    public Developer save(@RequestBody Developer developer){
+    public DeveloperResponse save(@RequestBody Developer developer){
         Developer createdDeveloper = DeveloperFactory.createDeveloper(developer,taxable);
         if(Objects.nonNull(createdDeveloper)){
             developers.put(developer.getId(), developer);
         }
-        return null;
+        return new DeveloperResponse(developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
     }
 }
