@@ -53,5 +53,13 @@ public class DeveloperController {
         return new DeveloperResponse("get succeed", developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
     }
 
-
+    @DeleteMapping("/{id}")
+    public DeveloperResponse delete(@PathVariable Integer id){
+        Developer developer = developers.get(id);
+        if(Objects.isNull(developer)){
+            return new DeveloperResponse("developer is not found with given id" + id, id, null, null, null);
+        }
+        developers.remove(id);
+        return new DeveloperResponse("get succeed", developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
+    }
 }
