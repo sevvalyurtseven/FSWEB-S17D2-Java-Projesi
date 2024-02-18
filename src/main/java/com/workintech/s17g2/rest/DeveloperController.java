@@ -42,5 +42,16 @@ public class DeveloperController {
         //return new ArrayList<>(developers.values());
         return developers.values().stream().toList();
     }
+    @GetMapping("/{id}")
+    public DeveloperResponse get(@PathVariable Integer id){
+        Developer developer = developers.get(id);
+        //Developer objesi null ise
+        if(Objects.isNull(developer)){
+            return new DeveloperResponse("developer is not found with given id" + id, id, null, null, null);
+        }
+        //Developer objesi null değil ise
+        return new DeveloperResponse("get succeed", developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
+    }
+
 
 }
