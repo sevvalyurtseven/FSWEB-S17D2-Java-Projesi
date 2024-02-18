@@ -52,6 +52,22 @@ public class DeveloperController {
         //Developer objesi null değil ise
         return new DeveloperResponse("get succeed", developer.getId(), developer.getName(), developer.getSalary(), developer.getExperience());
     }
+    @PutMapping("/{id}")
+    public DeveloperResponse update(@PathVariable Integer id, @RequestBody Developer developer){
+        //Gonderilen developer null ise:
+        if(Objects.isNull(developer)){
+            return new DeveloperResponse("new developer is not valid", null, null, null, null);
+        }
+        Developer found = developers.get(id);
+        //Gonderilen developer bulunamazsa:
+        if(Objects.isNull(found)){
+            return new DeveloperResponse("developer is not found with given id" + id, id, null, null, null);
+        }
+        Developer updatedDeveloper = DeveloperFactory.createDeveloper(developer, taxable);
+        //Put ile yeni developeri eskisinin yerine guncelleriz
+        this.developers.put(id, updatedDeveloper);
+        return new DeveloperResponse("update succeed!", id, updatedDeveloper.getName(), updatedDeveloper.getSalary(), updatedDeveloper.getExperience());
+    }
 
     @DeleteMapping("/{id}")
     public DeveloperResponse delete(@PathVariable Integer id){
